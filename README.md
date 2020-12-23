@@ -1,12 +1,9 @@
-# Hello World with Nuxt
+# README
 
-This repo is forked from [nuxt.js/examples/hello-world](https://github.com/nuxt/nuxt.js/tree/dev/examples/hello-world).
+This is the [NuxtJS](https://nuxtjs.org/) [Hello world](https://github.com/nuxt/nuxt.js/tree/dev/examples/hello-world) example on [Render](https://render.com).
 
-The app in this repo is deployed at https://nuxt-js.onrender.com.
+The app in this repo is deployed at [https://nuxtjs.onrender.com](https://express.onrender.com).
 
-## Deploy
+## Deployment
 
-Click the button below to deploy this app on Render.
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
+See https://render.com/docs/deploy-nuxtjs for quick and easy deployment instructions.
