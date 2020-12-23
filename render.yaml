@@ -5,10 +5,3 @@ services:
   plan: starter
   buildCommand: yarn; yarn build
   startCommand: yarn start
-# Uncomment the following to deploy this app as a static site on render
-# - type: web
-#   name: nuxtjs-static
-#   env: static
-#   buildCommand: yarn; yarn generate 
-#   staticPublishPath: dist
-
