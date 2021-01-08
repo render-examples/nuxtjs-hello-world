@@ -1,0 +1,10 @@
+{
+  "name": "example-hello-world",
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate"
+  }
+}
