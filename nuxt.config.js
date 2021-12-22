@@ -20,7 +20,18 @@ export default {
   css: ['~/assets/scss/global.scss'],
 
   build: {
-    transpile: "THREE"
-  }
-}
+    transpile: ["THREE"]
+  },
 
+  buildModules: ['nuxt-gsap-module'],
+
+  gsap: {
+    extraPlugins: {
+      scrollTo: true,
+      scrollTrigger: true
+    },
+    extraEases: {
+      expoScaleEase: true
+    }
+  },
+}
