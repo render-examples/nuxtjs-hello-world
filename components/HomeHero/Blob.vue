@@ -53,14 +53,7 @@ export default {
     // const sphereVertex = new THREE.Vector3();
 
     var update = function() {
-
-      // change '0.003' for more aggressive animation
-      var time = performance.now() * 0.0006;
-      //console.log(time)
-
-      //go through vertices here and reposition them
-      
-      // change 'k' value for more spikes
+      var time = performance.now() * 0.0005;
 
       var k = 2;
       for (var i = 0; i < sphere.geometry.vertices.length; i++) {
@@ -74,17 +67,13 @@ export default {
 
     function animate() {
       sphere.rotation.x -= 0.01;
-      // sphere.rotation.y += 0.005;
 
       update();
-      /* render scene and camera */
       renderer.render(scene,camera);
       requestAnimationFrame(animate);
     }
 
-
     requestAnimationFrame(animate);
-
   }
 }
 </script>
