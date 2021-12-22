@@ -12,7 +12,7 @@
 
 .t-display_1 {
     @extend %t-display;
-    @include fluid-type($sm, $xl, 50px, 120px);
+    @include fluid-type($sm, $xl, 50px, 150px);
 }
 
 .t-display_2 {

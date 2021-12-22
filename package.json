@@ -2,7 +2,8 @@
   "name": "example-hello-world",
   "dependencies": {
     "node-sass": "^4.14.1",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "three": "^0.83.0"
   },
   "scripts": {
     "dev": "nuxt",

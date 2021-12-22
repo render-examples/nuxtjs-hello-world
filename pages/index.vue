@@ -1,9 +1,18 @@
 <template>
   <div>
     <home-hero />
-    <NLink to="/about">
-      About Page
-    </NLink>
+
+    <section id="services">
+      <h2>Services</h2>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
   </div>
 </template>
 
