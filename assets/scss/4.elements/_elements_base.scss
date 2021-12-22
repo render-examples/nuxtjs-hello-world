@@ -1,0 +1,42 @@
+/**
+ * ELEMENTS.BASE
+ *
+ * @description : Base element styles
+ *
+ */
+
+::selection {
+    background:  hsla(var(--beta), 0.15); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background:  hsla(var(--beta), 0.15); /* Gecko Browsers */
+}
+
+
+html {
+    height: 100%;
+    height: -webkit-fill-available;
+    overflow-y: scroll;
+}
+
+body {
+    color: hsl(var(--foreground));
+    transition: background-color 1s ease, color 1s ease;
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+figure {
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid hsl(var(--foreground));
+    margin: 3em 0;
+}

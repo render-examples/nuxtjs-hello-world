@@ -1,0 +1,26 @@
+/**
+ * TOOLS.MIXINS.FLUID_TYPE
+ *
+ * @description : Interpolate spacing size between a min and max
+ *
+ */
+
+
+@mixin fluid-space($spacing-type, $min-vw, $max-vw, $min-spacing-size, $max-spacing-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-spacing-size);
+    $u4: unit($max-spacing-size);
+    
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            #{$spacing-type}: $min-spacing-size;
+            @media screen and (min-width: $min-vw) {
+                #{$spacing-type}: calc(#{$min-spacing-size} + #{strip-unit($max-spacing-size - $min-spacing-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                #{$spacing-type}: $max-spacing-size;
+            }
+        }
+    }
+}

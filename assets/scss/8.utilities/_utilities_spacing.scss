@@ -1,0 +1,40 @@
+/**
+ * UTILTIES.SPACING
+ *
+ * @description : Utility classes for adding consistent margins to elements
+ *
+ */
+
+ // MARGINS
+.u-mb_0 {
+    margin-bottom: 0;
+}
+.u-mt_0 {
+    margin-top: 0;
+}
+.u-mb_auto {
+    margin-bottom: auto;
+}
+.u-mt_auto {
+    margin-top: auto;
+}
+
+@each $step in $spacer-multiples {
+    // MARGINS
+    
+    .u-mb_#{$step} {
+        @include fluid-space('margin-bottom', $sm, $xl, ($step * $spacer), ($step * $spacer * 2))
+    }
+    .u-mt_#{$step} {
+        @include fluid-space('margin-top', $sm, $xl, ($step * $spacer), ($step * $spacer * 2))
+    }
+    
+    // PADDING
+    .u-pb_#{$step} {
+        @include fluid-space('padding-bottom', $sm, $xl, ($step * $spacer), ($step * $spacer * 2))
+    }
+    .u-pt_#{$step} {
+        @include fluid-space('padding-top', $sm, $xl, ($step * $spacer), ($step * $spacer * 2))
+    }
+}
+    

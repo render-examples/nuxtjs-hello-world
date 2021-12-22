@@ -1,0 +1,103 @@
+/**
+ * GLOBAL.SCSS
+ *
+ * @Project     : Format Site
+ *
+ */
+
+// Set the viewport to resize responsively (similar to viewport meta tag)
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+body {
+    font-family: 'Planc', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+//  0. PLUGINS
+// @import '../../node_modules/path-to/plugin.scss';
+
+/**
+ * 1. SETTINGS
+ */
+@import '1.settings/settings_animations';
+@import '1.settings/settings_breakpoints';
+@import '1.settings/settings_colors';
+@import '1.settings/settings_font_planc';
+@import '1.settings/settings_grid';
+@import '1.settings/settings_spacing';
+@import '1.settings/settings_typography';
+
+/**
+ *  2. TOOLS
+ */
+@import '2.tools/tools_accessibility_focus';
+@import '2.tools/tools_functions';
+@import '2.tools/tools_mixin_fluid-type';
+@import '2.tools/tools_mixin_fluid-spacing';
+@import '2.tools/tools_mixin_position';
+
+/**
+ * 3. GENERIC
+ *  No classes here
+ */
+@import '3.generic/generic_animations';
+@import '3.generic/generic_reset';
+@import '3.generic/generic_box-sizing';
+@import '3.generic/generic_focus-ring';
+// @import '3.generic/generic_transition_layout'; // Default layout transitions
+
+/**
+ *  4. ELEMENTS
+ *  Basic styles for raw HTML elements
+ *  No classes here
+ */
+@import '4.elements/elements_base';
+@import '4.elements/elements_disabled';
+@import '4.elements/elements_forms';
+@import '4.elements/elements_media';
+@import '4.elements/elements_typography';
+
+/**
+ *  5. OBJECTS
+ *  These are repeating visual/structural patterns with no 'design' added
+ *  Used on their own, or across components. Must be built with classes only
+ */
+// @import '5.objects/objects.flexbox-grid';  // Flexbox grid with IE11 support (consider using standard CSS grid if IE support isn't required.
+@import '5.objects/objects_flow';
+@import '5.objects/objects_grid';  // 12-column CSS Grid
+@import '5.objects/objects_wrapper';
+@import '5.objects/objects_page_transition';
+
+/**
+ *  6. TYPOGRAPHY
+ *  All styles on top of resets that affect typography, including titles, paragraphs, lists, links etc.
+ *  Prefer classes where possible
+ */
+@import '6.typography/typography_body';
+@import '6.typography/typography_display';
+@import '6.typography/typography_headings';
+@import '6.typography/typography_links';
+@import '6.typography/typography_lists';
+@import '6.typography/typography_meta';
+@import '6.typography/typography_richtext';
+
+/**
+ *  7. COMPONENTS
+ *  A component is a reusable chunk of UI that is clearly designed, as opposed to an object.
+ *  Clearly refers to a block of UI: pagination, buttons, modals, icons... etc
+ *  You should be able to take a component and paste it anywhere in the app
+ *  Must be built with classes only
+ */
+// @import '7.components/components_buttons';
+
+
+/**
+ *  8. UTILITIES
+ */
+@import '8.utilities/utilities_spacing';
+@import '8.utilities/utilities_type';
+@import '8.utilities/utilities_validation';
+@import '8.utilities/utilities_visually-hide';

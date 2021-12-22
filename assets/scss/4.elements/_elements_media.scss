@@ -1,0 +1,18 @@
+/**
+ * ELEMENTS.MEDIA
+ *
+ * @description : Basic image & video styles
+ *
+ */
+
+/**
+ *  Set images for responsive sizing
+ *  Let's include the video element too
+ */
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

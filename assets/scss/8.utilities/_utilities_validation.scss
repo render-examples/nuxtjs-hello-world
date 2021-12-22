@@ -1,0 +1,37 @@
+/**
+ * COMPONENTS.VALIDATION
+ *
+ * @description : Validation styles for form elements
+ *
+ */
+
+// Error messages, appear below form fields
+p.u-error {
+    color: $warning;
+    font-weight: bold;
+    font-size: 0.875em;
+    padding: 0.5em 0;
+    margin-bottom: 0;
+}
+
+// Error state for check elements
+input[type='radio'],
+input[type='checkbox'] {
+    &.u-error + label {
+        color: $warning;
+    }
+}
+
+// Error state for text/select inputs
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='search'],
+input[type='url'],
+select,
+textarea {
+    &.u-error {
+        border-color: $warning;
+    }
+}

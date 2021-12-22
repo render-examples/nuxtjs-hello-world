@@ -1,0 +1,32 @@
+/**
+ * ELEMENTS.SCROLLBAR
+ *
+ * @description : 
+ *
+ */
+
+/* Sets the dimensions of the entire scrollbar */
+html::-webkit-scrollbar {
+    background: var(--background);
+    // width: 12px;
+    // height: 24px;
+}
+
+/* The grabbable scrollbar button  */
+html::-webkit-scrollbar-thumb {
+    background: var(--foreground);
+    width: 12px;
+    border-radius: 4px;
+}
+
+/* The vertical scrollbar background */
+html::-webkit-scrollbar-track {
+    background: var(--background);
+    padding: 2px;
+    width: 20px;
+}
+
+html {
+    scrollbar-color: var(--foreground) var(--background);
+    // scrollbar-width: thin;
+}

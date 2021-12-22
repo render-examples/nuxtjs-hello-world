@@ -1,0 +1,60 @@
+@use '@/assets/scss/1.settings/settings_breakpoints' as bp;
+
+.c-home_hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: clamp(80px, 8vw, 120px) 0;
+  position: relative;
+}
+
+.c-home_hero__copy {
+  width: 100%;
+}
+
+.c-home_hero__title {
+  line-height: 0.9;
+  text-transform: uppercase;
+  grid-column: 4 / 13;
+  row-gap: 0;
+  margin-bottom: 0.3em;
+
+  @media(min-width: bp.$md) {
+    grid-column: 5 / 13;
+  }
+
+}
+
+.c-home_hero__title--1 {
+  grid-column: 1 / 13;
+  grid-row: 1;
+  @media(min-width: bp.$md) {
+    grid-column: 3 / 13;
+  }
+}
+
+.c-home_hero__title--2 {
+  grid-column: 3 / 13;
+  grid-row: 2;
+  transform: translateX(-0.1em); // grid alignment
+  @media(min-width: bp.$md) {
+    grid-column: 5 / 13;
+  }
+}
+
+.c-home_hero__sub_title {
+  grid-column: 3 / 13;
+
+  @media(min-width: bp.$md) {
+    grid-column: 5 / 13;
+  }
+}
+
+.c-home_hero__micro {
+  position: absolute;
+  right: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}

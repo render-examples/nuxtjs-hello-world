@@ -1,0 +1,26 @@
+/**
+ * SETTINGS.SPACING
+ *
+ * @description : Settings for controlling global spacing
+ *
+ */
+
+//  Spacing unit for calculating consistent margins/padding etc.
+//  Uses 8px grid system by default https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
+//  Apply units with the spacer() function,
+//  e.g. margin-top: spacer()
+//  or multiples of the spacer: padding-bottom: spacer(4)
+
+@use 'settings_breakpoints' as breakpoints;
+
+$spacer: 4px;
+
+$spacer-multiples: (1, 2, 3, 4, 8, 12, 16, 24, 36, 48);
+
+:root {
+  --buffer: 1.25rem;
+  
+  @media (min-width: breakpoints.$md) {
+    --buffer: 2rem;
+  }
+}

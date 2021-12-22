@@ -1,0 +1,20 @@
+/**
+ * GENERIC.BOXSIZING
+ *
+ * @description : Sets global box-sizing
+ * @reference   : https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+// Update box-sizing for child & pseudo elements
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}

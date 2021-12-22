@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome!</h1>
+    <home-hero />
     <NLink to="/about">
       About Page
     </NLink>
@@ -8,9 +8,15 @@
 </template>
 
 <script>
+import HomeHero from '@/components/HomeHero/HomeHero';
+
 export default {
+  components: {
+    HomeHero
+  },
   head: {
     title: 'Home page'
-  }
+  },
+  layout: 'default'
 }
 </script>

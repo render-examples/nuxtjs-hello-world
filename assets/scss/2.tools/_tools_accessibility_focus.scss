@@ -1,0 +1,13 @@
+/**
+ * TOOLS.ACCESSIBILITY
+ *
+ * @description :  Sets the style for the focus ring
+ *                 Make sure that everything that needs to be focusable has an obvioud focus state.
+ *
+ */
+
+// Apply this where required on buttons, links etc.
+@mixin focus-outline {
+    box-shadow: rgba($delta, 0.25) 0 0 0 2px inset;
+    outline: none;
+}

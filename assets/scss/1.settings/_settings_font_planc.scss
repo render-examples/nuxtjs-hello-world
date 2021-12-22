@@ -1,0 +1,36 @@
+/**
+ * GENERIC.FONT.OPENSANS
+ *
+ * @description : A default font included for demonstration
+ *                Remove this if you're not using it…
+ *
+ */
+
+// Regular
+@font-face {
+    font-family: 'Planc';
+    font-display: fallback;
+    src: url('@/assets/fonts/Planc-Regular.woff2') format('woff2'),
+         url('@/assets/fonts/Planc-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Italic
+// @font-face {
+//     font-family: 'Soehne';
+//     font-display: fallback;
+//     src: url('@/assets/fonts/soehne/soehne-web-buch-kursiv.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: italic;
+// }
+
+// Semi Bold
+@font-face {
+    font-family: 'Planc';
+    font-display: fallback;
+    src: url('@/assets/fonts/Planc-SemiBold.woff2') format('woff2'),
+         url('@/assets/fonts/Planc-SemiBold.woff') format('woff');
+    font-weight: 600; // Semibold
+    font-style: normal;
+}

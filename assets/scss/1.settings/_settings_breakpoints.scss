@@ -1,0 +1,35 @@
+/**
+ * SETTINGS.BREAKPOINTS
+ *
+ * @description : Define major breakpoints
+ *
+ */
+
+// Breakpoints
+$breakpoints: (
+    'sm': 480px,
+    'md': 768px,
+    'lg': 1024px,
+    'xl': 1440px,
+    'nav': 480px // where we transition from mobile to desktop nav
+);
+
+// Dump our breakpoints into some vars for easy reference in breakpoint mixins
+$sm: map-get($breakpoints, sm);
+$md: map-get($breakpoints, md);
+$lg: map-get($breakpoints, lg);
+$xl: map-get($breakpoints, xl);
+$nav: map-get($breakpoints, nav);
+$navUpperBound: map-get($breakpoints, nav) -1px;
+
+
+/**
+    e.g.
+    .thing {
+        background: green;
+
+        @media (min-width: $md){
+            background: blue;
+        }
+    }
+*/

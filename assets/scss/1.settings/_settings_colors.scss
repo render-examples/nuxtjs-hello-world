@@ -1,0 +1,44 @@
+/**
+ * SETTINGS.COLORS
+ *
+ * @description : Color variable definitions
+ *
+ */
+
+/**
+ * Main Colours
+ */
+
+// Default
+:root {
+  // Palette HSL Values
+  --alpha: 61, 6%, 13%; // Charcoal
+  --omega: 45, 15%, 94%; // Paper
+
+  --foreground: var(--alpha);
+  --background: var(--omega);
+}
+
+// $base-grey : hsl(30, 1%, 1%);
+
+// $grey : $base-grey;
+// $grey-10 : scale-color($base-grey, $lightness: 10%);
+// $grey-20 : scale-color($base-grey, $lightness: 20%);
+// $grey-30 : scale-color($base-grey, $lightness: 30%);
+// $grey-40 : scale-color($base-grey, $lightness: 40%);
+// $grey-50 : scale-color($base-grey, $lightness: 50%);
+// $grey-60 : scale-color($base-grey, $lightness: 60%);
+// $grey-70 : scale-color($base-grey, $lightness: 70%);
+// $grey-80 : scale-color($base-grey, $lightness: 80%);
+// $grey-90 : scale-color($base-grey, $lightness: 90%);
+// $grey-95 : scale-color($base-grey, $lightness: 95%);
+// $grey-98 : scale-color($base-grey, $lightness: 98%);
+
+/**
+ * UX/Validation colors
+ */
+
+$notice: #2ab9ff; // Blue
+$confirm: #6fd100; // Green
+$alert: #ffa800; // Orange
+$warning: #c60000; // Red

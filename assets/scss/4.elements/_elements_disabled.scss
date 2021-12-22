@@ -1,0 +1,17 @@
+/**
+ * ELEMENTS.DISABLED
+ *
+ * @description : Default styles for disabled elements
+ *
+ */
+
+// The absence of the disabled attribute is the only valid syntax for "false",
+// i.e. <input type="text" disabled="false" /> is not valid
+.disabled,
+*:disabled,
+[aria-disabled],
+[disabled] {
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+}

@@ -1,0 +1,15 @@
+/**
+ * OBJECTS.PAGE_TRANSITION
+ *
+ * @description : 
+ *
+ */
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.35s ease-in-out;
+}
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+}

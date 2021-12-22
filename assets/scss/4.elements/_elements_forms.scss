@@ -1,0 +1,66 @@
+/**
+ * ELEMENTS.FORMS
+ *
+ * @description : Core form styles
+ *
+ */
+
+$form_el_v_padding: 1em;
+$form_el_h_padding: 1.5em;
+
+form {
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+}
+
+%text_input {
+    border: 1px solid var(--foreground);
+    border-radius: 0; //  Reset User Agent styles for iOS
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    padding: $form_el_v_padding $form_el_h_padding;
+    width: 100%;
+
+    &:focus {
+        border-color: var(--foreground-50);
+        outline: none;
+    }
+    &::placeholder {
+        color: rgba($text-color, 0.5);
+    }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='search'],
+input[type='url'] {
+    @extend %text_input;
+}
+
+input[type='radio'] {
+}
+
+input[type='checkbox'] {
+}
+
+textarea {
+    @extend %text_input;
+    min-height: 10em;
+    resize: vertical;
+}
+
+input[type='submit'],
+button {
+    // Remove user agent styles
+    appearance: none;
+    border-radius: 0; //  Reset for iOS
+    border: 0;
+    display: inline-block;
+    padding: 0;
+}

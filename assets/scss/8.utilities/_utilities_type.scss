@@ -1,0 +1,39 @@
+/**
+ * UTILITIES.TYPE
+ *
+ * @description : These classes trump other preceeding styles.
+ *                Userful for quickly applying common adjustments.
+ */
+
+
+.u-tc {
+    text-align: center;
+}
+.u-tr {
+    text-align: right;
+}
+.u-tl {
+    text-align: left;
+}
+
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $size: nth($breakpoint, 2);
+
+    @media screen and (min-width:$size) {
+        .u-tc_#{$name} {
+            text-align: center;
+        }
+        .u-tr_#{$name} {
+            text-align: right;
+        }
+        .u-tl_#{$name} {
+            text-align: left;
+        }
+    }
+}
+
+// first-line indent
+.u-fi {
+    text-indent: 1.5em;
+}

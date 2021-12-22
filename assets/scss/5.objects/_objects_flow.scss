@@ -1,0 +1,22 @@
+/**
+ * OBJECTS.FLOW
+ *
+ * @description : Controls space between adjacent elements
+ *
+ */
+
+:root {
+    --flow-gap-offset: clamp(15px, 4vw, 70px);
+    --flow-gap: clamp(30px, 8vw, 140px);
+}
+
+.o-flow {
+    & > * + * {
+        margin-top: var(--flow-gap);
+    }
+    [data-flow-ignore] {
+        margin-top: 0 !important;
+        position: relative;
+        top: var(--flow-gap-offset);
+    }
+}

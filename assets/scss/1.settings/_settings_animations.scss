@@ -1,0 +1,16 @@
+/**
+ * SETTINGS.ANIMATIONS
+ *
+ * @description : Keyframe animations for this site
+ *
+ */
+
+:root {
+    --transition-duration-short: 0.17s;
+    --transition-duration-medium: 0.35s;
+    --transition-duration-long: 0.7s;
+    --transition-duration-xlong: 1.2s;
+
+    --ease-in-out: cubic-bezier(.5,0,0,1);
+    --ease-out: cubic-bezier(0,.19,.01,1);
+}

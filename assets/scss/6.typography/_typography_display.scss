@@ -1,0 +1,25 @@
+/**
+ * TYPOGRAPHY.DISPLAY
+ *
+ * @description : Display Text
+ *
+ */
+
+%t-display {
+    line-height: 1;
+    font-weight: 400;
+}
+
+.t-display_1 {
+    @extend %t-display;
+    @include fluid-type($sm, $xl, 50px, 120px);
+}
+
+.t-display_2 {
+    @include fluid-type($sm, $xl, 40px, 80px);
+    @extend %t-display;
+}
+
+// .t-display_3 {
+//     @extend %t-display;
+// }

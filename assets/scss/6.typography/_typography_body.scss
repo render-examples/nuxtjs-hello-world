@@ -1,0 +1,27 @@
+﻿/**
+ * TYPOGRAPHY.COPY
+ *
+ * @description : Main body copy styles
+ *
+ */
+
+/* e.g.
+    .t-body {
+        font-size: rem(18);
+    }
+*/
+
+.t-body--reg {
+  @include fluid-type($sm, $xl, 14px, 16px);
+  line-height: 1.5;
+}
+
+.t-body--md {
+  @include fluid-type($sm, $xl, 16px, 20px);
+  line-height: 1.5;
+}
+
+.t-body--lg {
+  @include fluid-type($sm, $xl, 20px, 26px);
+  line-height: 1.5;
+}

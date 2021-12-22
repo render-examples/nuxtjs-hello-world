@@ -1,0 +1,90 @@
+/**
+ * TYPOGRAPHY.RICHTEXT
+ *
+ * @description : Bulk apply styles for rich text - usually CMS content.
+ *
+ */
+
+.t-richtext {
+  --list-indent: 1.22em;
+
+  h2,
+  .t-heading_2,
+  h3,
+  .t-heading-3,
+  h4,
+  .t-heading_4,
+  h5,
+  .t-heading_5 {
+    margin-bottom: 0.4em;
+  }
+
+  h1 {
+    @extend .t-heading_1;
+  }
+  h2 {
+    @extend .t-heading_2;
+  }
+  h3 {
+    @extend .t-heading_3;
+  }
+  h4 {
+    @extend .t-heading_4;
+  }
+  h5 {
+    @extend .t-heading_5;
+  }
+
+  p,
+  ul {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: hsl(var(--beta));
+    text-decoration: none;
+    border-bottom: 1px solid hsl(var(--grey-40));
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding: 0 0 0 2em;
+      &::before {
+        position: absolute;
+        inset: 0.5em auto auto 0;
+        content: '';
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1L12 7M12 7L6 13M12 7H0' stroke='%230B1247' stroke-width='2'/%3E%3C/svg%3E");
+        background-size: cover;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+    position: relative;
+    line-height: 0em;
+  }
+  .button_group,
+  .og-button {
+    margin: var(--v-space) 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  figure.o-wrapper,
+  figure.o-wrapper--h {
+    padding: var(--v-space) 0;
+  }
+}
+
+.large .t-richtext,
+.t-richtext.large {
+  p {
+    @extend .t-body--lg;
+  }
+}

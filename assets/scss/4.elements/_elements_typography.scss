@@ -1,0 +1,37 @@
+/**
+ * ELEMENTS.TYPOGRAPHY
+ *
+ * @description : Basic typographical styles
+ *
+ */
+
+body {
+  font-family: $font_1;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+p {
+  margin: 0; //($base-line-height + em)
+  a[href] {
+    border-bottom: 2px solid var(--foreground-50);
+    transition: border-color 0.3s ease;
+    &:hover {
+      border-bottom: 2px solid var(--foreground);
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-skip-ink: auto; // Stop character descenders colliding with link underlines.
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+i,
+em {
+  font-style: italic;
+}

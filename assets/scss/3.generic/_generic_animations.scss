@@ -1,0 +1,11 @@
+/**
+ * GNENERIC.ANIMATIONS
+ *
+ * @description : Avoids a flicker on initial render for elements that are transitioned with js
+ *
+ */
+
+[data-will-animate] {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}

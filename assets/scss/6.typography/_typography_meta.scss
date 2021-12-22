@@ -1,0 +1,32 @@
+/**
+ * TYPOGRAPHY.META
+ *
+ * @description : 
+ *
+ */
+
+%t-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  @include fluid-type($sm, $xl, 14px, 16px);
+  line-height: 1;
+  p {
+    margin: 0 !important;
+  }
+}
+
+.t-meta_1 {
+  @extend %t-meta;
+  color: hsl(var(--grey-60));
+}
+
+.t-meta_2 {
+  @extend %t-meta;
+  color: hsl(var(--zeta));
+}
+
+.t-meta_3 {
+  @extend %t-meta;
+  font-size: 12px;
+  color: hsl(var(--zeta));
+}

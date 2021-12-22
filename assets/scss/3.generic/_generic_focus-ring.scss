@@ -1,0 +1,12 @@
+/**
+ * GENERIC.FOCUS_RING.
+ *
+ * @description : Hides the focus ring unless the UA determines it should be visbile
+ * e.g. during keyboard navigation
+ *
+ */
+
+
+:focus:not(:focus-visible) {
+    outline: none;
+}

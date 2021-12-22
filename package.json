@@ -1,10 +1,24 @@
 {
   "name": "example-hello-world",
   "dependencies": {
+    "node-sass": "^4.14.1",
     "nuxt": "latest"
   },
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "~2.15.0",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "prettier": "^2.3.2",
+    "sass": "^1.42.1",
+    "sass-loader": "^10.1.1"
   }
 }

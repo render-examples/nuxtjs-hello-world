@@ -1,0 +1,32 @@
+﻿/**
+ * TYPOGRAPHY.HEADINGS
+ *
+ * @description : Main body level headings styles
+ *
+ */
+
+%t-heading {
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.t-heading_1 {
+  @extend %t-heading;
+  @include fluid-type($sm, $xl, 50px, 75px);
+}
+.t-heading_2 {
+  @extend %t-heading;
+  @include fluid-type($sm, $xl, 40px, 60px);
+}
+.t-heading_3 {
+  @extend %t-heading;
+  @include fluid-type($sm, $xl, 32px, 45px);
+}
+.t-heading_4 {
+  @extend %t-heading;
+  @include fluid-type($sm, $xl, 25px, 35px);
+}
+.t-heading_5 {
+  @extend %t-heading;
+  @include fluid-type($sm, $xl, 16px, 26px);
+}

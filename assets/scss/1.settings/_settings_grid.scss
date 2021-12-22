@@ -1,0 +1,43 @@
+/**
+ * SETTINGS.GRID
+ *
+ * @description : Settings used in grid calculations
+ *
+ */
+
+
+// ------------------------------------
+// Edit Settings as Needed
+
+:root {
+    --grid-gutter-width: 0.5rem;
+    
+    @media screen and (min-width: $sm){
+        --grid-gutter-width: 1rem;
+    }
+    @media screen and (min-width: $lg){
+        --grid-gutter-width: 2rem;
+    }
+}
+
+
+// Set the number of columns you want to use on your layout.
+$grid-columns: 12 !default;
+
+// Set the gutter between columns.
+$grid-gutter-width: 1rem !default;
+
+// Set a margin for the container sides.
+$grid-outer-margin: 2rem !default;
+
+// Set a max width for the container.
+$grid-max-width: 1920px !default;
+
+// Stop Editing
+// ------------------------------------
+
+
+
+// Gutter settings
+$gutter-compensation: $grid-gutter-width * .5 * -1;
+$half-gutter-width: $grid-gutter-width * .5;
