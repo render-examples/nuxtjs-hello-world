@@ -1,0 +1,7 @@
+<svg data-icon="design" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0.5 0.5H60.5V60.5H0.5V0.5Z" stroke="#EC553B"/>
+  <rect x="0.5" y="0.5" width="38" height="38" stroke="#EC553B"/>
+  <rect x="60.5" y="60.5" width="22" height="22" transform="rotate(-180 60.5 60.5)" stroke="#EC553B"/>
+  <circle cx="19.5" cy="19.5" r="19" stroke="#EC553B"/>
+  <path d="M60.5 38.5C60.5 50.6503 50.6503 60.5 38.5 60.5" stroke="#EC553B"/>
+</svg>

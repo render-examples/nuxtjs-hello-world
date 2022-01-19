@@ -6,11 +6,11 @@
  */
 
 ::selection {
-    background:  hsla(var(--beta), 0.15); /* WebKit/Blink Browsers */
+    background:  hsla(var(--foreground), 0.15); /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    background:  hsla(var(--beta), 0.15); /* Gecko Browsers */
+    background:  hsla(var(--foreground), 0.15); /* Gecko Browsers */
 }
 
 

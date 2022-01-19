@@ -1,0 +1,21 @@
+.c-service_card {
+  padding: clamp(16px, 2vw, 32px);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  display: grid;
+  grid-template-columns: 1fr 20%;
+  gap: 1em;
+}
+
+.c-service_card__title {
+  font-size: 1.5em;
+}
+
+.c-service_card__icon {
+  justify-self: end;
+}
+
+.c-service_card__description {
+  font-size: 14px;
+  line-height: 1.4;
+}

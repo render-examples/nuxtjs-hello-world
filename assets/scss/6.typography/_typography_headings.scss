@@ -30,3 +30,7 @@
   @extend %t-heading;
   @include fluid-type($sm, $xl, 16px, 24px);
 }
+
+.t-heading--caps {
+  text-transform: uppercase;
+}

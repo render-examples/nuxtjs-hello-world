@@ -1,0 +1,10 @@
+@use '@/assets/scss/1.settings/settings_breakpoints' as bp;
+
+.c-services_list {
+  display: grid;
+  gap: var(--grid-gutter-width);
+
+  @media(min-width: bp.$lg){
+    grid-template-columns: 1fr 1fr;
+  }
+}

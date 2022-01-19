@@ -14,9 +14,16 @@
   // Palette HSL Values
   --alpha: 61, 6%, 13%; // Charcoal
   --omega: 45, 15%, 94%; // Paper
+  --zeta: 45, 5%, 7%; // Black
 
   --foreground: var(--alpha);
   --background: var(--omega);
+
+  --service-strategy: #506AEB;
+  --service-design: #EC553B;
+  --service-development: #B950EB;
+  --service-support: #F3A32B;
+
 }
 
 // $base-grey : hsl(30, 1%, 1%);

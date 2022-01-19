@@ -19,15 +19,13 @@
   color: var(--foreground);
   font-size: 1.25rem;
   padding: 1em 1.75em;
-  border: 2px solid var(--foreground);
+  border: 1px solid currentColor;
   border-radius: 10em;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 
-  &:hover {
-    background: var(--foreground);
-    color: var(--background);
-    border-color: var(--foreground);
+  &:hover, &:focus {
+    box-shadow: 2px solid var(--foreground);
   }
 }
 

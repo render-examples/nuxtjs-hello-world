@@ -1,23 +1,21 @@
 <template>
-  <section class="o-wrapper  o-wrapper--h">
-    <div class="c-home_hero" ref="homeHero">
+  <section class="c-home_hero">
+    <div class="o-wrapper  o-wrapper--h">
       <Blob class="c-home_hero__blob" />
-      <div class="c-home_hero__micro">
-        <span class="c-home_hero__loc">
-          CHC &bull; NZ / -43.546760,  172.646543
-        </span>
-        <span class="c-home_hero__temp">
-          16&deg;C
-        </span>
-      </div>
-      <div class="c-home_hero__copy">
+      <div class="c-home_hero__copy o-grid">
         <h1 class="c-home_hero__title t-display_1  o-grid">
-          <span class="c-home_hero__title--1">Creativity</span>
-          <span class="c-home_hero__title--2">&amp; Code</span> 
+          <span class="c-home_hero__title--1" ref="title1">Creativity</span>
+          <span class="c-home_hero__title--2" ref="title2">&amp; Code</span> 
         </h1>
-        <div class="o-grid">
           <h2 class="t-heading_5 c-home_hero__sub_title">
             Format&trade; is a digital design and development consultancy working with forward-thinking businesses to create engaging experiences.</h2>
+        <div class="c-home_hero__micro">
+          <span class="c-home_hero__loc">
+            Ōtautahi CHC &bull; NZ / -43.546760,  172.646543
+          </span>
+          <span class="c-home_hero__temp">
+            16&deg;C
+          </span>
         </div>
       </div>
     </div>
@@ -30,6 +28,14 @@ import Blob from './Blob.vue';
 export default {
   components: {
     Blob
+  },
+  mounted() {
+    const timeline = this.$gsap.timeline({paused: true, delay: 1});
+
+    timeline.fromTo(this.$refs.title1, { opacity: 0, y: 20 }, {opacity: 1, y: 0, duration: 2, ease: "power4.out"})
+      .fromTo(this.$refs.title2, {opacity: 0, y: 20},{opacity: 1, y: 0, duration: 2, ease: "power4.out"}, '-=1');
+
+    timeline.play();
   }
 }
 </script>

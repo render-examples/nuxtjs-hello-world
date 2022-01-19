@@ -1,5 +1,10 @@
 export default {
   target: 'static',
+
+  server: {
+    host: '0' // default: localhost
+  },
+
 // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Format Digital – Web Design and Development',

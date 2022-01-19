@@ -47,11 +47,6 @@ export default {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
     scene.add( ambientLight );
 
-
-
-    // const positionAttribute = sphere.geometry.getAttribute( 'position' );
-    // const sphereVertex = new THREE.Vector3();
-
     var update = function() {
       var time = performance.now() * 0.0005;
 
@@ -74,6 +69,12 @@ export default {
     }
 
     requestAnimationFrame(animate);
+
+    window.addEventListener( 'resize', function () {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+    }, {passive: true} );
   }
 }
 </script>

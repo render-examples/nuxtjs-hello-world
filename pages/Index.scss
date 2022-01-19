@@ -1,0 +1,38 @@
+@use '@/assets/scss/1.settings/settings_breakpoints' as bp;
+
+.c-home_section {
+  & + & {
+    margin-top: clamp(80px, 10vw, 180px);
+  }
+}
+
+.c-home_section__title_wrap {
+  grid-column: 1 / 13;
+  
+  @media (min-width: bp.$md) {
+    grid-column: 1 / 5;
+  }
+}
+
+.c-home_section__title {
+  margin-bottom: 1em;
+  @media (min-width: bp.$md) {
+    position: sticky;
+    top: 0.75em;
+  }
+}
+
+.c-home_section__content {
+  grid-column: 1 / 13;
+  
+  @media (min-width: bp.$lg) {
+    grid-column: 5 / 13;
+    &--short {
+      grid-column: 5 / 11;
+    }
+  }
+}
+
+.c-contact__direct {
+  font-size: 0.875em;
+}

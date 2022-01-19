@@ -17,12 +17,15 @@ label {
 }
 
 %text_input {
-    border: 1px solid var(--foreground);
-    border-radius: 0; //  Reset User Agent styles for iOS
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    background-color: transparent;
+    color: inherit;
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
-    padding: $form_el_v_padding $form_el_h_padding;
+    border-radius: 0;
+    padding: $form_el_v_padding 0;
     width: 100%;
 
     &:focus {
@@ -30,8 +33,15 @@ label {
         outline: none;
     }
     &::placeholder {
-        color: rgba($text-color, 0.5);
+        color: inherit;
+        opacity: 0.5
     }
+
+    &.--large {
+        font-size: 1.5em;
+        padding: 0.25em 0;
+    }
+
 }
 
 input[type='text'],
@@ -52,7 +62,10 @@ input[type='checkbox'] {
 textarea {
     @extend %text_input;
     min-height: 10em;
+    border: 1px solid currentColor;
+    border-radius: 12px;
     resize: vertical;
+    padding: $form_el_v_padding $form_el_h_padding;
 }
 
 input[type='submit'],
@@ -61,6 +74,7 @@ button {
     appearance: none;
     border-radius: 0; //  Reset for iOS
     border: 0;
+    
     display: inline-block;
     padding: 0;
 }
