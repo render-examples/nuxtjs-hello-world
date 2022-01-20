@@ -40,5 +40,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use './footer.scss';
+@use './Footer.scss';
 </style>
