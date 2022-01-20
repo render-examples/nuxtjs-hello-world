@@ -1,3 +1,6 @@
+@use '@/assets/scss/1.settings/settings_breakpoints' as bp;
+
+
 .c-service_card {
   padding: clamp(24px, 2vw, 32px);
   border-radius: 20px;
@@ -20,4 +23,8 @@
   font-size: 14px;
   line-height: 1.4;
   grid-column: span 2;
+  
+  @media (min-width: bp.$md) {
+    grid-column: unset;
+  }
 }

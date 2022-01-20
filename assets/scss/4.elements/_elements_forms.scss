@@ -16,7 +16,7 @@ label {
     display: inline-block;
 }
 
-%text_input {
+@mixin text_input {
     border: 0;
     border-bottom: 1px solid currentColor;
     background-color: transparent;
@@ -50,7 +50,7 @@ input[type='password'],
 input[type='tel'],
 input[type='search'],
 input[type='url'] {
-    @extend %text_input;
+    @include text_input;
 }
 
 input[type='radio'] {
@@ -60,7 +60,7 @@ input[type='checkbox'] {
 }
 
 textarea {
-    @extend %text_input;
+    @include text_input;
     min-height: 10em;
     border: 1px solid currentColor;
     border-radius: 12px;
