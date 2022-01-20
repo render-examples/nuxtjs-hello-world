@@ -28,6 +28,12 @@ export default {
     transpile: ["THREE"]
   },
 
+  generate: {
+    minify: { 
+      removeRedundantAttributes: false
+    }
+  },
+
   buildModules: ['nuxt-gsap-module'],
 
   gsap: {

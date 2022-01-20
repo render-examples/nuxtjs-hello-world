@@ -51,18 +51,18 @@
           </div>
 
           <div class="c-home_section__content  c-home_section__content--short">
-            <form name="contact" netlify>
+            <form name="contact" netlify autocomplete>
               <div class="c-form__row  u-mb_4">
                 <label for="#contact-name"> Name</label>
-                <input type="text" class="--large" name="name" id="contact-name" placeholder="Your name">
+                <input type="text" class="--large" name="name" id="contact-name" placeholder="Your name" autocomplete="name">
               </div>
               <div class="c-form__row  u-mb_4">
                 <label for="#contact-email">Email</label>
-                <input type="text" class="--large" name="name" id="contact-name" placeholder="you@email.com">
+                <input type="email" class="--large" name="email" id="contact-email" placeholder="you@email.com" autocomplete="email">
               </div>
               <div class="c-form__row  u-mb_4">
-                <label for="#contact-name" class="u-mb_2"> Message</label>
-                <textarea name="message" id="message" cols="30" rows="20" placeholder="Your message"></textarea>
+                <label for="#contact-message" class="u-mb_2"> Message</label>
+                <textarea name="message" id="contact-message" cols="30" rows="20" placeholder="Your message"></textarea>
               </div>
               <div class="c-form__row  u-mb_4">
                 <button class="c-btn c-btn--pri ">Send</button>
