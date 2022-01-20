@@ -2,9 +2,11 @@
 
 .c-services_list {
   display: grid;
-  gap: var(--grid-gutter-width);
-
+  column-gap: var(--grid-gutter-width);
+  row-gap: calc(var(--grid-gutter-width) * 2);
+  
   @media(min-width: bp.$lg){
+    gap: var(--grid-gutter-width);
     grid-template-columns: 1fr 1fr;
   }
 }

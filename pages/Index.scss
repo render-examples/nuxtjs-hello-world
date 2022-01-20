@@ -17,10 +17,19 @@
 .c-home_section__title {
   margin-bottom: 1em;
   @media (min-width: bp.$md) {
-    position: sticky;
-    top: 0.75em;
+    margin-bottom: 0;
   }
 }
+
+.c-home_section--sticky_heading {
+  .c-home_section__title {
+    @media (min-width: bp.$md) {
+      position: sticky;
+      top: 0.75em;
+    }
+  }
+}
+
 
 .c-home_section__content {
   grid-column: 1 / 13;
@@ -35,4 +44,41 @@
 
 .c-contact__direct {
   font-size: 0.875em;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.c-contact__phone {
+  position: relative;
+  text-decoration-color: var(--grey-50);
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color 0.2s ease;
+  
+  &:hover {
+    text-decoration-color: var(--grey-70);
+    .c-contact__shaka {
+      opacity: 1;
+    }
+  }
+}
+
+.c-contact__shaka {
+  animation: shaka 0.5s alternate infinite ease-in-out;
+  opacity: 0;
+  width: 2.5em;
+  height: auto;
+  transform-origin: 40% 60%;
+  transition: opacity 0.15s ease;
+  position: absolute;
+  right: -3em;
+  top: -1em;
+}
+
+@keyframes shaka {
+  from {
+    transform: rotate(-35deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  }
 }

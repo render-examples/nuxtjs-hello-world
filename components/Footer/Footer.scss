@@ -1,42 +1,70 @@
+@use '@/assets/scss/1.settings/settings_breakpoints' as bp;
+
 .c-footer {
+  // Dark Background
+  /*
   --foreground: var(--omega);
   --background: var(--zeta);
 
   background: hsl(var(--background));
   color: hsl(var(--foreground));
+  */
   padding-bottom: var(--buffer);
+
+  font-size: 14px;
+  @media(min-width: bp.$md) {
+    font-size: unset;
+  }
 }
 
 .c-footer__inner {
   border-radius: 16px;
-  padding: 2em;
-  background: rgba(255,255,255,0.03);
-
+  padding: 1em;
+  background: var(--grey-90);
+  
   .c-footer__social_link {
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
     transition: border 0.2s ease;
-
+    
     &:hover, &:focus {
       border-bottom-color: currentColor;
     }
+  }
+  
+  @media(min-width: bp.$md) {
+    padding: 2em;
   }
 }
 
 .c-footer__links {
   display: flex;
-  justify-self: flex-end;
   gap: 2em;
   grid-column: 1 / 13;
+  
+  @media(min-width: bp.$md) {
+    justify-self: flex-end;
+  }
 }
 
 .c-footer__logo {
-  grid-column: 1 / 7;
+  grid-column: 1 / 4;
+  margin: 0 0 0.25em 0.1em;
+
+  @media(min-width: bp.$md) {
+    grid-column: 1 / 3;
+  }
 }
 
 .c-footer__legal {
-  grid-column: 7 / 13;
+  grid-column: 5 / 13;
   align-self: flex-end;
+  line-height: 1;
   justify-self: flex-end;
+  font-size: 12px;
+  
+  @media(min-width: bp.$md) {
+    font-size: unset;
+  }
 }

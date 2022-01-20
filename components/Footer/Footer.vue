@@ -22,7 +22,7 @@
             <path d="M117.636 76.4247L106.677 98.3433H112.111L114.431 93.6421H126.459L128.779 98.3433H134.304L123.406 76.4247H117.636ZM120.475 81.4312L124.414 89.4293H116.507L120.475 81.4312Z" fill="#131211"/>
             <path d="M154 80.7901V76.4247H129.883V80.7901H139.408V98.3433H144.506V80.7901H154Z" fill="#131211"/>
           </svg>
-          <div class="c-footer__legal">&copy; {{year}} Format Digital Limited</div>
+          <div class="c-footer__legal">&copy;{{year}} Format Digital Ltd.</div>
         </div>  
       </div>
     </div>
