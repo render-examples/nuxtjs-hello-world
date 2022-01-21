@@ -11,7 +11,7 @@
             Format&trade; is a digital design and development consultancy working with forward-thinking businesses to create engaging experiences.</h2>
         <div class="c-home_hero__micro">
           <span class="c-home_hero__loc">
-            Ōtautahi CHC &bull; NZ / -43.546760,  172.646543
+            Ōtautahi CHC &bull; NZ / -43.546760&deg;, 172.646543&deg;
           </span>
           <span class="c-home_hero__temp">
             16&deg;C
@@ -32,8 +32,8 @@ export default {
   mounted() {
     const timeline = this.$gsap.timeline({paused: true, delay: 1});
 
-    timeline.fromTo(this.$refs.title1, { opacity: 0, y: 20 }, {opacity: 1, y: 0, duration: 2, ease: "power4.out"})
-      .fromTo(this.$refs.title2, {opacity: 0, y: 20},{opacity: 1, y: 0, duration: 2, ease: "power4.out"}, '-=1');
+    timeline.fromTo(this.$refs.title1, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 2, ease: "power4.out"})
+            .fromTo(this.$refs.title2, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 2, ease: "power4.out"}, '-=1');
 
     timeline.play();
   }
