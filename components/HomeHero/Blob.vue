@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import * as THREE from 'three';
 
 export default {
@@ -12,9 +13,13 @@ export default {
     },
     height: {
       type: Number
+    },
+    blobScale : {
+      type: Object
     }
   },
   mounted() {
+    const self = this;
     const noisifier = require('@/helpers/perlin.js');
 
     const renderer = new THREE.WebGLRenderer({
@@ -28,7 +33,7 @@ export default {
     renderer.setClearColor(0x000000,0);
 
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 0.1, 1000 );
+    var camera = new THREE.PerspectiveCamera( 35, window.innerWidth/window.innerHeight, 0.1, 1000 );
     camera.position.z = 5;
 
     var sphere_geometry = new THREE.SphereGeometry(1, 128, 128);
@@ -53,7 +58,10 @@ export default {
       var k = 2;
       for (var i = 0; i < sphere.geometry.vertices.length; i++) {
           var p = sphere.geometry.vertices[i];
-          p.normalize().multiplyScalar(1 - 0.2 * noisifier.noise.perlin3(p.x * k  + time, p.y * k  + time, p.z * k  + time * -1));
+          p.normalize().multiplyScalar(1 - 0.2 * noisifier.noise.perlin3(
+            p.x * k + time,
+            p.y * k + time,
+            p.z * k + time));
       }
       sphere.geometry.computeVertexNormals();
       sphere.geometry.normalsNeedUpdate = true;
@@ -61,7 +69,10 @@ export default {
     }
 
     function animate() {
-      sphere.rotation.x -= 0.01;
+      // sphere.rotation.x -= 0.01;
+      sphere.rotation.x += self.$gsap.utils.mapRange(0, window.innerHeight, -0.03, 0.03, self.getCursorPosition.y);
+      sphere.rotation.y += self.$gsap.utils.mapRange(0, window.innerWidth, -0.03, 0.03, self.getCursorPosition.x);
+      sphere.scale.set(self.blobScale.value, self.blobScale.value, self.blobScale.value);
 
       update();
       renderer.render(scene,camera);
@@ -75,6 +86,9 @@ export default {
       camera.updateProjectionMatrix();
       renderer.setSize( window.innerWidth, window.innerHeight );
     }, {passive: true} );
+  },
+  computed : {
+        ...mapGetters("app", ["getIsMobile", "getIsDesktop", "getHasHover", "getIsLoading", "getCursorPosition"]),
   }
 }
 </script>

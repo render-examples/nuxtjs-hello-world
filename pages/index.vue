@@ -23,7 +23,7 @@
 
           <div class="c-home_section__content  c-home_section__content--short">
             <div class="t-body--md">
-              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&apos;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging design with a passion for technology to provide a unique blend of strategic design and development.</p>
+              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&rsquo;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging design with a passion for technology to provide a unique blend of strategic design and development.</p>
             </div>
           </div>
         </div>

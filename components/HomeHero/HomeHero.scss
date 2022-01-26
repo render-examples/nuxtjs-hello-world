@@ -33,6 +33,11 @@
   width: 100%;
   grid-column: 1/ 13;
   grid-row: 1;
+  opacity: 0;
+
+  [data-loaded="true"] & {
+    opacity: 1
+  }
 }
 
 .c-home_hero__title {
@@ -69,6 +74,9 @@
   grid-column: 3 / 12;
 
   @media(min-width: bp.$md) {
+    grid-column: 5 / 10;
+  }
+  @media(min-width: bp.$xl) {
     grid-column: 5 / 9;
   }
 }
