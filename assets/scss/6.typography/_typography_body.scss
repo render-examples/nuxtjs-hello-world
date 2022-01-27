@@ -11,6 +11,12 @@
     }
 */
 
+.t-body {
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
 .t-body--reg {
   @include fluid-type($sm, $xl, 14px, 16px);
   line-height: 1.5;

@@ -70,8 +70,8 @@ export default {
 
     function animate() {
       // sphere.rotation.x -= 0.01;
-      sphere.rotation.x += self.$gsap.utils.mapRange(0, window.innerHeight, -0.03, 0.03, self.getCursorPosition.y);
-      sphere.rotation.y += self.$gsap.utils.mapRange(0, window.innerWidth, -0.03, 0.03, self.getCursorPosition.x);
+      sphere.rotation.x += self.$gsap.utils.mapRange(0, window.innerHeight, -0.02, 0.02, self.getCursorPosition.y);
+      sphere.rotation.y += self.$gsap.utils.mapRange(0, window.innerWidth, -0.02, 0.02, self.getCursorPosition.x);
       sphere.scale.set(self.blobScale.value, self.blobScale.value, self.blobScale.value);
 
       update();

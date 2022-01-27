@@ -3,18 +3,19 @@
     <div class="o-wrapper  o-wrapper--h">
       <Blob class="c-home_hero__blob" :blobScale="blobScale"/>
       <div class="c-home_hero__copy o-grid">
-        <h1 class="c-home_hero__title t-display_1  o-grid">
-          <span class="c-home_hero__title--1" ref="title1">Creativity</span>
-          <span class="c-home_hero__title--2" ref="title2">&amp; Code</span> 
+        <h1 class="c-home_hero__title t-display_1  o-grid" ref="titleText" >
+          <span class="c-home_hero__title--1" data-text="Creativity" v-html="title1"></span>
+          <span class="c-home_hero__title--2" data-text="&amp; Code" v-html="title2"></span> 
         </h1>
           <h2 class="t-heading_5 c-home_hero__sub_title">
-            Format is a digital design and development consultancy working with forward-thinking businesses to create engaging experiences.</h2>
+            Format is a design and development consultancy working with forward-thinking businesses to create engaging digital experiences.</h2>
         <div class="c-home_hero__micro">
           <span class="c-home_hero__loc">
-            Ōtautahi CHC &bull; NZ / -43.546760&deg;, 172.646543&deg;
+            Ōtautahi CHC &bull; NZ
           </span>
           <span class="c-home_hero__temp">
-            16&deg;C
+            -43.546760&deg;, 172.646543&deg;
+            <!-- 16&deg;C -->
           </span>
         </div>
       </div>
@@ -24,6 +25,7 @@
 
 <script>
 import Blob from './Blob.vue';
+import { diceCharacters } from '@/helpers/textDicer.js';
 
 export default {
   components: {
@@ -34,7 +36,17 @@ export default {
       blobScale: {
         value: 0
       },
+      titleLine1: 'Creativity',
+      titleLine2: '& Code',
       hasLoaded: false
+    }
+  },
+  computed: {
+    title1() {
+      return diceCharacters(this.titleLine1);
+    },
+    title2() {
+      return diceCharacters(this.titleLine2);
     }
   },
   mounted() {
@@ -42,8 +54,7 @@ export default {
     const timeline = this.$gsap.timeline({paused: true, delay: 1});
 
     timeline.fromTo(this.blobScale, {value: 0}, {value: 1, duration: 2, ease: "circ.out"})
-            .fromTo(this.$refs.title1, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 2, ease: "power4.out"})
-            .fromTo(this.$refs.title2, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 2, ease: "power4.out"}, '-=1');
+            .fromTo(this.$refs.titleText.querySelectorAll('.letter'), {opacity: 0, y: 20}, {opacity: 1, y: 0, stagger: 0.05, duration: 1, ease: "power4.out"}, '-=0.5')
 
     timeline.play();
   }

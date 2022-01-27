@@ -34,6 +34,8 @@
   grid-column: 1/ 13;
   grid-row: 1;
   opacity: 0;
+  grid-auto-rows: min-content;
+
 
   [data-loaded="true"] & {
     opacity: 1
@@ -47,6 +49,11 @@
   grid-row: 1;
   row-gap: 0;
   margin-bottom: 0.3em;
+  grid-auto-rows: min-content;
+
+  ::v-deep .letter {
+    display: inline-block;
+  }
 
   @media(min-width: bp.$md) {
     grid-column: 1 / 13;
@@ -58,6 +65,10 @@
   grid-row: 1;
   @media(min-width: bp.$md) {
     grid-column: 3 / 12;
+  }
+
+  ::v-deep .letter--4 {
+    margin-left: -0.07em;
   }
 }
 
