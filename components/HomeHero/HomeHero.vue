@@ -7,8 +7,9 @@
           <span class="c-home_hero__title--1" data-text="Creativity" v-html="title1"></span>
           <span class="c-home_hero__title--2" data-text="&amp; Code" v-html="title2"></span> 
         </h1>
-          <h2 class="t-heading_5 c-home_hero__sub_title">
-            Format is a design and development consultancy working with forward-thinking businesses to create engaging digital experiences.</h2>
+        <h2 class="t-heading_5 c-home_hero__sub_title" ref="subTitle">
+          Format is a design and development consultancy working with forward-thinking businesses to create engaging digital experiences.
+        </h2>
         <div class="c-home_hero__micro">
           <span class="c-home_hero__loc">
             Ōtautahi CHC &bull; NZ
@@ -51,10 +52,11 @@ export default {
   },
   mounted() {
     this.hasLoaded = true;
-    const timeline = this.$gsap.timeline({paused: true, delay: 1});
+    const timeline = this.$gsap.timeline({paused: true, delay: 2});
 
     timeline.fromTo(this.blobScale, {value: 0}, {value: 1, duration: 2, ease: "circ.out"})
-            .fromTo(this.$refs.titleText.querySelectorAll('.letter'), {opacity: 0, y: 20}, {opacity: 1, y: 0, stagger: 0.05, duration: 1, ease: "power4.out"}, '-=0.5')
+            .fromTo(this.$refs.titleText.querySelectorAll('.letter'), {opacity: 0, y: 20}, {opacity: 1, y: 0, stagger: 0.05, duration: 1, ease: "power4.out"}, '-=0.65')
+            .fromTo(this.$refs.subTitle, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 1, ease: "power4.out"}, '-=0.6')
 
     timeline.play();
   }
