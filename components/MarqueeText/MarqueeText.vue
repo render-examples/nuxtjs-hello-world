@@ -26,10 +26,10 @@ export default {
   --move-final: calc(-50% + var(--offset));
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
-  font-size: 10vw;
+  font-size: clamp(70px, 8vw, 8vw);
   padding: 0.3em 0 0.06em 0;
   line-height: 1;
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
   width: 105%;
   margin-left: -2.5%;
 }

@@ -7,7 +7,7 @@ export default {
 
 // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Format Digital – Web Design and Development',
+    title: 'Format Digital – Web Design and Development Agency in Christchurch',
     htmlAttrs: {
       lang: 'en',
     },

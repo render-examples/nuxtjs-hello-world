@@ -84,6 +84,7 @@
 import HomeHero from '@/components/HomeHero/HomeHero';
 import ServicesList from '@/components/ServicesList/ServicesList';
 import MarqueeText from '@/components/MarqueeText/MarqueeText';
+import getSiteMeta from '@/helpers/getSiteMeta.js';
 
 export default {
   components: {
@@ -117,8 +118,11 @@ export default {
       ]
     }
   },
-  head: {
-    title: 'Home page'
+  head() {
+    return {
+      title: this.title,
+      meta: getSiteMeta(),
+    };
   },
   layout: 'default'
 }
