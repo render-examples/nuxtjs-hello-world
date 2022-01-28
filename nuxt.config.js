@@ -25,7 +25,17 @@ export default {
   css: ['~/assets/scss/global.scss'],
 
   build: {
-    transpile: ["THREE"]
+    transpile: ["THREE"],
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false,
+        'postcss-preset-env': {
+          features: {
+            'custom-properties': false
+          }
+        } 
+      }
+    }
   },
 
   generate: {
