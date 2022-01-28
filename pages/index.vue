@@ -22,12 +22,15 @@
           </div>
 
           <div class="c-home_section__content  c-home_section__content--short">
-            <div class="t-body--md">
-              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&apos;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging design with a passion for technology to provide a unique blend of strategic design and development.</p>
+            <div class="t-body t-body--md">
+              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&rsquo;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging design with a passion for technology to provide a unique blend of strategic design and development.</p>
+              <p>If you&apos;re undertaking a new web project, or need help with an existing one, why not <a href="#contact">reach out</a>.</p>
             </div>
           </div>
         </div>
       </section>
+          
+      <marquee-text />
       
       <section class="c-home_section" id="contact">
         <div class="o-wrapper o-wrapper--h o-grid">
@@ -50,6 +53,7 @@
             </div>
           </div>
 
+
           <div class="c-home_section__content  c-home_section__content--short">
             <form name="contact" netlify autocomplete>
               <div class="c-form__row  u-mb_4">
@@ -65,7 +69,7 @@
                 <textarea name="message" id="contact-message" cols="30" rows="20" placeholder="Your message"></textarea>
               </div>
               <div class="c-form__row  u-mb_4">
-                <button class="c-btn c-btn--pri ">Send</button>
+                <button class="c-btn c-btn--pri">Send</button>
               </div>
             </form>
           </div>
@@ -79,18 +83,20 @@
 <script>
 import HomeHero from '@/components/HomeHero/HomeHero';
 import ServicesList from '@/components/ServicesList/ServicesList';
+import MarqueeText from '@/components/MarqueeText/MarqueeText';
 
 export default {
   components: {
     HomeHero,
-    ServicesList
+    ServicesList,
+    MarqueeText,
   },
   data() {
     return {
       services: [
         {
           title: 'Strategy',
-          description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis auctor adipiscing elit sed amet, interdum. Facilisis donec ultrices amet eleifend purus risus. Mauris vestibulum elit felis habitant tincidunt mi venenatis cras.</p>',
+          description: '<p>A successful project starts with a sound strategic plan. A deep look into the business&apos; goals sets the tone for the project and ensures it&apos;s focussing on the right things.</p>',
           icon: 'service-icon-strategy.svg'
         },
         {

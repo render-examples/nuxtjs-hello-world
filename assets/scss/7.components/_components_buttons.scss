@@ -16,16 +16,17 @@
 // Primary button
 .c-btn--pri {
   background: transparent;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   font-size: 1.25rem;
   padding: 1em 1.75em;
-  border: 1px solid currentColor;
+  border: 1px solid hsl(var(--foreground));
   border-radius: 10em;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 
   &:hover, &:focus {
-    box-shadow: 2px solid var(--foreground);
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
   }
 }
 
