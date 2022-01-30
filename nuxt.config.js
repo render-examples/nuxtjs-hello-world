@@ -18,14 +18,51 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
+    script: [{type: 'application/ld+json', json: 
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Format Digital Limited",
+        "image": "https://www.formatdigital.co.nz/og-image.png",
+        "@id": "",
+        "url": "https://www.formatdigital.co.nz",
+        "telephone": "+64212110659",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "153 Waltham Road",
+          "addressLocality": "Christchurch",
+          "postalCode": "8011",
+          "addressCountry": "NZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.5467512,
+          "longitude": 172.6463053
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "16:30"
+        } 
+      }
+    }]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/global.scss'],
 
   build: {
     transpile: ["THREE"],
+
+    // This stops PostCSS freaking out about CSS custom properties
     postcss: {
       plugins: {
         'postcss-custom-properties': false,

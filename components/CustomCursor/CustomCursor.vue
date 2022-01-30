@@ -164,6 +164,7 @@ export default {
   position: absolute;
   font-size: 10px;
   opacity: 0.3;
+
   &--x {
     left: 0;
     top: 100%;

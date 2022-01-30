@@ -30,8 +30,8 @@ export default {
   padding: 0.3em 0 0.06em 0;
   line-height: 1;
   transform: rotate(-2deg);
-  width: 105%;
-  margin-left: -2.5%;
+  width: calc(100vw  + var(--stretch));
+  margin-left: calc(var(--stretch) * -0.5);
 }
 
 .c-marquee_text__track {
@@ -39,7 +39,7 @@ export default {
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 20s linear infinite;
+  animation: marquee 10s linear infinite;
   animation-play-state: running;
 }
 
