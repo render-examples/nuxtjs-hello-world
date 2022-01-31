@@ -4,8 +4,8 @@
       <div class="c-footer__inner">
         <div class="o-grid u-mb_8">
           <div class="c-footer__links">
-            <a href="https://www.instagram.com/format_nz/" target="_blank" class="c-footer__social_link">Instagram</a>
-            <a href="https://www.linkedin.com/in/glenhoneybone/" class="c-footer__social_link" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/format_nz/" class="c-footer__social_link" target="_blank"  rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/in/glenhoneybone/" class="c-footer__social_link" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
