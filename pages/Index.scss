@@ -1,6 +1,7 @@
 @use '@/assets/scss/1.settings/settings_breakpoints' as bp;
 
 .c-home_section {
+  padding-top: 2rem;
   & + & {
     margin-top: clamp(80px, 10vw, 180px);
   }

@@ -23,15 +23,13 @@
 
           <div class="c-home_section__content  c-home_section__content--short">
             <div class="t-body t-body--md">
-              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&rsquo;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging design with a passion for technology to provide a unique blend of strategic design and development.</p>
+              <p>Format is the digital design and development studio of Glen Honeybone. Glen has over a decade&rsquo;s experience designing and building websites, web applications and digital products for local and international clients. He combines a love of engaging user experiences with a passion for technology to provide a unique blend of strategic design and development.</p>
               <p>If you&apos;re undertaking a new web project, or need help with an existing one, why not <a href="#contact">reach out</a>.</p>
             </div>
           </div>
         </div>
       </section>
-          
-      <marquee-text />
-      
+                
       <section class="c-home_section" id="contact">
         <div class="o-wrapper o-wrapper--h o-grid">
           <div class="c-home_section__title_wrap">
@@ -53,25 +51,8 @@
             </div>
           </div>
 
-
           <div class="c-home_section__content  c-home_section__content--short">
-            <form name="contact" netlify autocomplete>
-              <div class="c-form__row  u-mb_4">
-                <label for="#contact-name"> Name</label>
-                <input type="text" class="--large" name="name" id="contact-name" placeholder="Your name" autocomplete="name">
-              </div>
-              <div class="c-form__row  u-mb_4">
-                <label for="#contact-email">Email</label>
-                <input type="email" class="--large" name="email" id="contact-email" placeholder="you@email.com" autocomplete="email">
-              </div>
-              <div class="c-form__row  u-mb_4">
-                <label for="#contact-message" class="u-mb_2"> Message</label>
-                <textarea name="message" id="contact-message" cols="30" rows="20" placeholder="Your message"></textarea>
-              </div>
-              <div class="c-form__row  u-mb_4">
-                <button class="c-btn c-btn--pri">Send</button>
-              </div>
-            </form>
+            <contact-form />
           </div>
         </div>
       </section>
@@ -83,36 +64,41 @@
 <script>
 import HomeHero from '@/components/HomeHero/HomeHero';
 import ServicesList from '@/components/ServicesList/ServicesList';
-import MarqueeText from '@/components/MarqueeText/MarqueeText';
+// import MarqueeText from '@/components/MarqueeText/MarqueeText';
+import ContactForm from '@/components/ContactForm/ContactForm';
 import getSiteMeta from '@/helpers/getSiteMeta.js';
 
 export default {
   components: {
     HomeHero,
     ServicesList,
-    MarqueeText,
+    // MarqueeText,
+    ContactForm
   },
   data() {
     return {
       services: [
         {
           title: 'Strategy',
-          description: '<p>A successful project starts with a sound strategic plan. A deep look into the business&apos; goals sets the tone for the project and ensures it&apos;s focussing on the right things.</p>',
+          description: `<p>A successful digital project begins with a look at where you’ve been and where you want to go to build a solid business case. The next step is aligning the project’s goals with business goals to form a strategy that guides all the decisions made throughout the project.</p>
+            <p>Digital Strategy • Requirements Gathering</p>`,
           icon: 'service-icon-strategy.svg'
         },
         {
           title: 'Design',
-          description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis auctor adipiscing elit sed amet, interdum. Facilisis donec ultrices amet eleifend purus risus. Mauris vestibulum elit felis habitant tincidunt mi venenatis cras.</p>',
+          description: `<p>Your website is a critical touch-point between your audience and your business and is often their first interaction with it. Whether you need a small website design or large-scale design system, a visual design that’s created with empathy and a well thought-out user experience ensures you’ll leave a lasting impression.</p>
+            <p>User Experience Design • Web Design • User Interface Design • Prototyping</p>`,
           icon: 'service-icon-design.svg'
         },
         {
           title: 'Development',
-          description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis auctor adipiscing elit sed amet, interdum. Facilisis donec ultrices amet eleifend purus risus. Mauris vestibulum elit felis habitant tincidunt mi venenatis cras.</p>',
+          description: `<p>Building a digital product is equal parts art and science. A well-engineered website is performant, secure, accessible, provides a great editing experience, adheres to industry best-practices and crafted with attention to detail to create a cohesive user experience.</p>
+            <p>Front-end Development • Front-end Architecture • Headless CMS Development • CMS Integration</p>`,
           icon: 'service-icon-development.svg'
         },
         {
           title: 'Support',
-          description: '<p>Launching a shiny new website is just the beginning — it’s only then that it starts to pay dividends. Ongoing maintenance and support measured against strategic goals ensures you’ll see a valuable return on your investment.</p>',
+          description: `<p>A successful launch is really just the beginning. Ongoing analysis, maintenance and support measured against strategic goals ensures your project creates lasting value.</p>`,
           icon: 'service-icon-support.svg'
         },
       ]
