@@ -2,12 +2,14 @@
 
 
 .c-service_card {
-  padding: clamp(24px, 2vw, 32px);
-  border-radius: 20px;
   background: var(--grey-90);
+  border-radius: 20px;
+  padding: clamp(24px, 2vw, 32px);
+  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 20%;
   column-gap: 1em;
+  grid-template-rows: min-content;
   row-gap: 2em;
 }
 
@@ -23,7 +25,7 @@
   font-size: 14px;
   line-height: 1.4;
   grid-column: span 2;
-  
+
   @media (min-width: bp.$md) {
     grid-column: unset;
   }
