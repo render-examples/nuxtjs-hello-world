@@ -29,7 +29,7 @@
           </div>
         </div>
       </section>
-                
+
       <section class="c-home_section" id="contact">
         <div class="o-wrapper o-wrapper--h o-grid">
           <div class="c-home_section__title_wrap">
@@ -92,8 +92,8 @@ export default {
         },
         {
           title: 'Development',
-          description: `<p>Building a digital product is equal parts art and science. A well-engineered website is performant, secure, accessible, provides a great editing experience, adheres to industry best-practices and crafted with attention to detail to create a cohesive user experience.</p>
-            <p>Front-end Development • Front-end Architecture • Headless CMS Development • CMS Integration</p>`,
+          description: `<p>Building a digital product is equal parts art and science. A well-engineered website is performant, secure, accessible, provides a great editing experience, adheres to industry best-practices and is crafted with attention to detail to create a cohesive user experience.</p>
+            <p>Front-end Development • Front-end Architecture • Headless CMS Development • CMS Integration • Vue JS & React Development</p>`,
           icon: 'service-icon-development.svg'
         },
         {

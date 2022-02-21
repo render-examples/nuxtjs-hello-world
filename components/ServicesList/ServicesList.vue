@@ -1,6 +1,6 @@
 <template>
-  <ul class="c-services_list">
-    <li v-for="service in services" :key="service.title">
+  <ul class="c-services_list" ref="list">
+    <li v-for="service in services" :key="service.title" ref="item">
       <ServiceCard :service="service"/>
     </li>
   </ul>
@@ -15,6 +15,18 @@ export default {
   ],
   components: {
     ServiceCard
+  },
+  mounted(){
+
+    const tl = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: this.$refs.list,
+        start: "top bottom-=200px",
+      },
+    });
+    
+    tl.fromTo(this.$refs.item, {opacity: 0, y: 20}, {opacity: 1, y: 0, rotateX: 0, duration: 2, stagger: 0.4, ease: 'expo.out'})
+
   }
 }
 </script>

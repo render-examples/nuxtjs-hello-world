@@ -5,6 +5,7 @@
   column-gap: var(--grid-gutter-width);
   row-gap: calc(var(--grid-gutter-width) * 2);
   align-content: stretch;
+  perspective: 1000px;
   
   @media(min-width: bp.$lg){
     gap: var(--grid-gutter-width);
