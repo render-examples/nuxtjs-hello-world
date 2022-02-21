@@ -5,7 +5,7 @@ export default {
     host: '0' // default: localhost
   },
 
-// Global page headers: https://go.nuxtjs.dev/config-head
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Format Digital – Web Design and Development Agency in Christchurch',
     htmlAttrs: {
@@ -20,41 +20,52 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
-    script: [{type: 'application/ld+json', json: 
+    script: [
+      // Schema.org definitions
       {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Format Digital Limited",
-        "image": "https://www.formatdigital.co.nz/og-image.png",
-        "@id": "",
-        "url": "https://www.formatdigital.co.nz",
-        "telephone": "+64212110659",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "153 Waltham Road",
-          "addressLocality": "Christchurch",
-          "postalCode": "8011",
-          "addressCountry": "NZ"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -43.5467512,
-          "longitude": 172.6463053
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:30",
-          "closes": "16:30"
-        } 
-      }
-    }]
+        type: 'application/ld+json', json: 
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Format Digital Limited",
+          "image": "https://www.formatdigital.co.nz/og-image.png",
+          "@id": "",
+          "url": "https://www.formatdigital.co.nz",
+          "telephone": "+64212110659",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "153 Waltham Road",
+            "addressLocality": "Christchurch",
+            "postalCode": "8011",
+            "addressCountry": "NZ"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -43.5467512,
+            "longitude": 172.6463053
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30",
+            "closes": "16:30"
+          } 
+        }
+      },
+
+      // Recaptcha
+      {
+        hid: 'recaptcha',
+        src: 'https://www.google.com/recaptcha/api.js',
+        async: true, defer: true
+      },
+    ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/global.scss'],
