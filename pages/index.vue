@@ -98,7 +98,7 @@ export default {
         },
         {
           title: 'Support',
-          description: `<p>A successful launch is really just the beginning. Maintenance and support, combined with on-going analysis measured against strategic goals, informs the evolution of your project and ensures it creates lasting value and is.</p>
+          description: `<p>A successful launch is really just the beginning. Maintenance and support, combined with on-going analysis measured against strategic goals, informs the evolution of your project and ensures it creates lasting value.</p>
           <p>Maintenance • Performance Monitoring</p>`,
           icon: 'service-icon-support.svg'
         },
