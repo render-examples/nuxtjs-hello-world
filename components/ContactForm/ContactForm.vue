@@ -43,6 +43,9 @@
       <p class="t-heading_3 u-mb_2">Thanks for getting in touch.</p>
       <p class="t-body--lg">Your message has been sent successfully.</p>
     </div>
+    <div v-if="submitFailed">
+      Looks like something went wrong. How about a call – Glen <a href="tel:+64212110659">+64 21 211 0659</a>
+    </div>
   </ValidationObserver>
 </template>
 
@@ -63,6 +66,7 @@ export default {
       email: null,
       message: null,
       submitSuccess: false,
+      submitFailed: false,
       errors: []
     }
   },
@@ -83,6 +87,9 @@ export default {
           const response = JSON.parse(xhr.response);
           if (xhr.status === 200) {
             that.submitSuccess = true
+          }
+          if (xhr.status !== 200) {
+            that.submitFailed = true
           }
         };
         xhr.send(formData);
