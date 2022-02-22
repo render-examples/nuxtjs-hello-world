@@ -86,19 +86,20 @@ export default {
         },
         {
           title: 'Design',
-          description: `<p>Your website is a critical touch-point between your audience and your business and is often their first interaction with it. Whether you need a small website design or large-scale design system, a visual design that’s created with empathy and a well thought-out user experience ensures you’ll leave a lasting impression.</p>
-            <p>User Experience Design • Web Design • User Interface Design • Prototyping</p>`,
+          description: `<p>Your website is a critical touch-point between your audience and your business and is often their first interaction with it. Whether you need a small website design or large-scale design system, a visual design that’s created with empathy and a well-thought-out user experience ensures you’ll leave a lasting impression.</p>
+            <p>User Experience Design • Web Design • User Interface Design • Prototyping • Information Architecture</p>`,
           icon: 'service-icon-design.svg'
         },
         {
           title: 'Development',
           description: `<p>Building a digital product is equal parts art and science. A well-engineered website is performant, secure, accessible, provides a great editing experience, adheres to industry best-practices and is crafted with attention to detail to create a cohesive user experience.</p>
-            <p>Front-end Development • Front-end Architecture • Headless CMS Development • CMS Integration • Vue JS & React Development</p>`,
+            <p>Front-End Development • Front-End Architecture • Headless CMS Development • CMS Integration • Vue JS & React Development</p>`,
           icon: 'service-icon-development.svg'
         },
         {
           title: 'Support',
-          description: `<p>A successful launch is really just the beginning. Ongoing analysis, maintenance and support measured against strategic goals ensures your project creates lasting value.</p>`,
+          description: `<p>A successful launch is really just the beginning. Ongoing analysis, maintenance and support measured against strategic goals ensures your project creates lasting value.</p>
+          <p>Maintenance • Performance Monitoring</p>`,
           icon: 'service-icon-support.svg'
         },
       ]
