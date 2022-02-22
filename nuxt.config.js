@@ -96,6 +96,16 @@ export default {
     }
   },
 
+  // Nuxt Modules
+  modules: ['@nuxtjs/gtm'],
+
+  // Google Tag Manager Config
+  gtm: {
+    id: 'GTM-T5TPZHB',
+    pageTracking: true,
+    debug: true
+  },
+
   buildModules: ['nuxt-gsap-module'],
 
   gsap: {

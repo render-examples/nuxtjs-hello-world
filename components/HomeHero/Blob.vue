@@ -34,7 +34,7 @@ export default {
 
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 35, window.innerWidth/window.innerHeight, 0.1, 1000 );
-    camera.position.z = 5;
+    camera.position.z = 6;
 
     var sphere_geometry = new THREE.SphereGeometry(1, 128, 128);
     var sphere_material = new THREE.MeshPhongMaterial(0xffffff);
