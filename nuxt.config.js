@@ -70,8 +70,12 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/global.scss'],
 
+  plugins: [
+    "~/plugins/vee-validate.js"
+  ],
+
   build: {
-    transpile: ["THREE"],
+    transpile: ["vee-validate/dist/rules", "THREE"],
 
     // This stops PostCSS freaking out about CSS custom properties
     postcss: {

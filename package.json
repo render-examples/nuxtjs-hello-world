@@ -3,7 +3,8 @@
   "dependencies": {
     "node-sass": "^4.14.1",
     "nuxt": "latest",
-    "three": "^0.83.0"
+    "three": "^0.83.0",
+    "vee-validate": "^3.4.14"
   },
   "scripts": {
     "dev": "nuxt",
