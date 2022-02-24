@@ -71,7 +71,11 @@ export default {
   css: ['~/assets/scss/global.scss'],
 
   plugins: [
-    "~/plugins/vee-validate.js"
+    "~/plugins/vee-validate.js",
+    {
+      src: "~/plugins/gtag",
+      mode: "client"
+    }
   ],
 
   build: {
@@ -97,7 +101,7 @@ export default {
   },
 
   // Nuxt Modules
-  modules: ['@nuxtjs/google-analytics'],
+  // modules: ['@nuxtjs/google-analytics'],
 
   // Google Tag Manager Config
   googleAnalytics: {

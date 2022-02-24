@@ -1,11 +1,11 @@
 {
   "name": "example-hello-world",
   "dependencies": {
-    "@nuxtjs/google-analytics": "^2.4.0",
     "node-sass": "^4.14.1",
-    "nuxt": "latest",
+    "nuxt": "^2",
     "three": "^0.83.0",
-    "vee-validate": "^3.4.14"
+    "vee-validate": "^3.4.14",
+    "vue-gtag": "^1.16.1"
   },
   "scripts": {
     "dev": "nuxt",
