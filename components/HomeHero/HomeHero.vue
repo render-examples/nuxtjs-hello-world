@@ -53,12 +53,14 @@ export default {
   mounted() {
     this.hasLoaded = true;
     const timeline = this.$gsap.timeline({paused: true, delay: 0.5});
-
     timeline.fromTo(this.blobScale, {value: 0}, {value: 1, duration: 2, ease: "circ.out"})
             .fromTo(this.$refs.titleText.querySelectorAll('.letter'), {opacity: 0, y: 20}, {opacity: 1, y: 0, stagger: 0.05, duration: 1, ease: "power4.out"}, '-=0.65')
             .fromTo(this.$refs.subTitle, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 1, ease: "power4.out"}, '-=0.6')
 
-    timeline.play();
+    // wait for the main thread before we fire off animations
+    window.requestIdleCallback(()=>{
+      timeline.play();
+    });
   }
 }
 </script>
