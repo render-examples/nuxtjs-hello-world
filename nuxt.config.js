@@ -72,10 +72,6 @@ export default {
 
   plugins: [
     "~/plugins/vee-validate.js",
-    {
-      src: "~/plugins/gtag",
-      mode: "client"
-    }
   ],
 
   build: {
@@ -103,12 +99,16 @@ export default {
   // Nuxt Modules
   // modules: ['@nuxtjs/google-analytics'],
 
+  buildModules: [
+    'nuxt-gsap-module',
+    '@nuxtjs/google-analytics'
+  ],
+
   // Google Tag Manager Config
   googleAnalytics: {
-    id: 'G-440PSVE0BR',
+    id: 'UA-221030139-1',
   },
 
-  buildModules: ['nuxt-gsap-module'],
 
   gsap: {
     extraPlugins: {
