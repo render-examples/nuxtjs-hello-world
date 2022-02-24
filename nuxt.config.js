@@ -103,7 +103,8 @@ export default {
   gtm: {
     id: 'GTM-T5TPZHB',
     pageTracking: true,
-    debug: true
+    debug: false,
+    scriptURL: 'https://www.googletagmanager.com/gtag/js'
   },
 
   buildModules: ['nuxt-gsap-module'],
