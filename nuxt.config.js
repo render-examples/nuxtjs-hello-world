@@ -64,7 +64,7 @@ export default {
         hid: 'recaptcha',
         src: 'https://www.google.com/recaptcha/api.js',
         async: true, defer: true
-      },
+      }
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -97,14 +97,11 @@ export default {
   },
 
   // Nuxt Modules
-  modules: ['@nuxtjs/gtm'],
+  modules: ['@nuxtjs/google-analytics'],
 
   // Google Tag Manager Config
-  gtm: {
-    id: 'GTM-T5TPZHB',
-    pageTracking: true,
-    debug: false,
-    scriptURL: 'https://www.googletagmanager.com/gtag/js'
+  googleAnalytics: {
+    id: 'G-440PSVE0BR',
   },
 
   buildModules: ['nuxt-gsap-module'],
