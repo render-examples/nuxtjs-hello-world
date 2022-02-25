@@ -58,9 +58,7 @@ export default {
             .fromTo(this.$refs.subTitle, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 1, ease: "power4.out"}, '-=0.6')
 
     // wait for the main thread before we fire off animations
-    window.requestIdleCallback(()=>{
-      timeline.play();
-    });
+    timeline.play();
   }
 }
 </script>
