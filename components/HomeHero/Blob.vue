@@ -87,7 +87,7 @@ export default {
       console.log(intersects)
 
       if(intersects.length) {
-        self.$gsap.to(perlin, { adjust: 0.4, value: 1});
+        self.$gsap.to(perlin, { adjust: 0.5, value: 2.25});
       } else {
         self.$gsap.to(perlin, { adjust: 0.2, value: 2});
       }
