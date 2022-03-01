@@ -22,6 +22,15 @@ export default {
     const self = this;
     const noisifier = require('@/helpers/perlin.js');
 
+    var raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+
+    let perlin =  {
+      value: 2,
+      adjust: 0.2
+    };
+
+
     const renderer = new THREE.WebGLRenderer({
       canvas : this.$refs.blob,
       antialias:true,
@@ -55,13 +64,12 @@ export default {
     var update = function() {
       var time = performance.now() * 0.0005;
 
-      var k = 2;
       for (var i = 0; i < sphere.geometry.vertices.length; i++) {
           var p = sphere.geometry.vertices[i];
-          p.normalize().multiplyScalar(1 - 0.2 * noisifier.noise.perlin3(
-            p.x * k + time,
-            p.y * k + time,
-            p.z * k + time));
+          p.normalize().multiplyScalar(1 - perlin.adjust * noisifier.noise.perlin3(
+            p.x * perlin.value + time,
+            p.y * perlin.value + time,
+            p.z * perlin.value + time));
       }
       sphere.geometry.computeVertexNormals();
       sphere.geometry.normalsNeedUpdate = true;
@@ -72,6 +80,17 @@ export default {
       sphere.rotation.x += self.$gsap.utils.mapRange(0, window.innerHeight, -0.02, 0.02, self.getCursorPosition.y);
       sphere.rotation.y += self.$gsap.utils.mapRange(0, window.innerWidth, -0.02, 0.02, self.getCursorPosition.x);
       sphere.scale.set(self.blobScale.value, self.blobScale.value, self.blobScale.value);
+
+      raycaster.setFromCamera( pointer, camera );
+      const intersects = raycaster.intersectObjects( scene.children );
+
+      console.log(intersects)
+
+      if(intersects.length) {
+        self.$gsap.to(perlin, { adjust: 0.4, value: 1});
+      } else {
+        self.$gsap.to(perlin, { adjust: 0.2, value: 2});
+      }
 
       update();
       renderer.render(scene,camera);
@@ -85,6 +104,15 @@ export default {
       camera.updateProjectionMatrix();
       renderer.setSize( window.innerWidth, window.innerHeight );
     }, {passive: true} );
+
+    window.addEventListener( 'pointermove', onPointerMove );
+
+    function onPointerMove( e ) {
+      // calculate pointer position in normalized device coordinates
+      // (-1 to +1) for both components
+      pointer.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+      pointer.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+    }
   },
   computed : {
     ...mapGetters("app", ["getIsMobile", "getIsDesktop", "getHasHover", "getIsLoading", "getCursorPosition"]),
