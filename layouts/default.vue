@@ -26,6 +26,9 @@ export default {
     Header,
   },
   mounted(){
+    const canHover = window.matchMedia('(hover: hover)').matches; //true or false
+    this.$store.dispatch('app/setIsMobile', !canHover)
+
     this.preload = false;
     const tl = new this.$gsap.timeline({delay: 0.2});
     tl.fromTo('.default_layout', {opacity: 0}, {opacity: 1, duration: 1});

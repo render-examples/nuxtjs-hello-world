@@ -34,8 +34,7 @@ export default {
     };
   },
   mounted() {
-    const canHover = window.matchMedia('(hover: hover)').matches; //true or false
-    if(!canHover) return;
+    if(this.getIsMobile) return;
 
     const body = document.querySelector("body");
 

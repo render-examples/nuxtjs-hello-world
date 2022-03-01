@@ -51,10 +51,10 @@ export const getters = {
     return state.isLoading;
   },
   getIsMobile: (state) => {
-    return state.isMobile.isMobile;
+    return state.isMobile;
   },
   getIsDesktop: (state) => {
-    return state.isDesktop.isDesktop;
+    return state.isDesktop;
   },
   getHasHover: (state) => {
     return state.hasHover.hasHover;
@@ -74,8 +74,8 @@ export const actions = {
   setIsLoading (context) {
     context.commit('setIsLoading');
   },
-  setIsMobile (context) {
-    context.commit('setIsMobile');
+  setIsMobile (context, payload) {
+    context.commit('setIsMobile', payload);
   },
   setIsDesktop (context) {
     context.commit('setIsMobile');
