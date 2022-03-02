@@ -98,6 +98,10 @@ export default {
 
   // Nuxt Modules
   // modules: ['@nuxtjs/google-analytics'],
+  modules: [
+    // '@nuxtjs/google-analytics',
+    '@nuxtjs/sitemap'
+  ],
 
   buildModules: [
     'nuxt-gsap-module',
@@ -109,6 +113,18 @@ export default {
     id: 'UA-221030139-1',
   },
 
+  sitemap: {
+    hostname: 'https://www.formatdigital.co.nz',
+    gzip: true,
+    // exclude: [
+    //   '/admin/**'
+    // ],
+    routes: [
+      {
+        url: '/',
+      }
+    ]
+  },
 
   gsap: {
     extraPlugins: {
