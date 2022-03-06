@@ -2,7 +2,7 @@ const type = "website";
 const url = "https://www.formatdigital.co.nz";
 const title = "Format Digital";
 const description = "Format is a digital consultancy in Christchurch specialising in website and web application design and development.";
-const mainImage = url + "assets/image/og-image.png";
+const mainImage = url + "/assets/image/og-image.png";
 const twitterCard = "summary_large_image"
 
 export default (meta) => {
