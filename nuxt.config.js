@@ -60,11 +60,11 @@ export default {
       },
 
       // Recaptcha
-      {
-        hid: 'recaptcha',
-        src: 'https://www.google.com/recaptcha/api.js',
-        async: true, defer: true
-      }
+      // {
+      //   hid: 'recaptcha',
+      //   src: 'https://www.google.com/recaptcha/api.js',
+      //   async: true, defer: true
+      // }
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -97,9 +97,7 @@ export default {
   },
 
   // Nuxt Modules
-  // modules: ['@nuxtjs/google-analytics'],
   modules: [
-    // '@nuxtjs/google-analytics',
     '@nuxtjs/sitemap'
   ],
 
@@ -116,9 +114,6 @@ export default {
   sitemap: {
     hostname: 'https://www.formatdigital.co.nz',
     gzip: true,
-    // exclude: [
-    //   '/admin/**'
-    // ],
     routes: [
       {
         url: '/',
