@@ -98,7 +98,8 @@ export default {
 
   // Nuxt Modules
   modules: [
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'nuxt-speedkit'
   ],
 
   buildModules: [
