@@ -131,4 +131,33 @@ export default {
       expoScaleEase: true
     }
   },
+
+  speedkit: {
+    detection: {
+      performance: true,
+      browserSupport: true
+    },
+    performanceMetrics: {
+      device: {
+        hardwareConcurrency: { min: 2, max: 48 },
+        deviceMemory: { min: 2 }
+      },
+      timing: {
+        fcp: 800,
+        dcl: 1200
+      },
+      lighthouseDetectionByUserAgent: false
+    },
+    
+    componentAutoImport: false,
+    componentPrefix: undefined,
+    disableNuxtImage: true,
+    /**
+     * IntersectionObserver rootMargin for Components and Assets
+     */
+    lazyOffset: {
+      component: '0%',
+      asset: '0%'
+    }
+  }
 }
