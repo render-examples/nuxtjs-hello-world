@@ -1,5 +1,7 @@
 # README
 
+Glen : Uses node 14.18.1
+
 This is a [NuxtJS](https://nuxtjs.org/) [Hello world](https://github.com/nuxt/nuxt.js/tree/dev/examples/hello-world) example on [Render](https://render.com).
 
 The app in this repo is deployed at [https://hello-nuxt.onrender.com](https://hello-nuxt.onrender.com).

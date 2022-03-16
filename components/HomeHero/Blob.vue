@@ -5,6 +5,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import * as THREE from 'three';
+import { onLoad } from '../../helpers/onLoad';
 
 export default {
   props: {
@@ -102,7 +103,9 @@ export default {
       requestAnimationFrame(animate);
     }
 
-    requestAnimationFrame(animate);
+    onLoad(()=>{
+      requestAnimationFrame(animate);
+    }, 1);
 
     window.addEventListener( 'resize', function () {
       camera.aspect = window.innerWidth / window.innerHeight;

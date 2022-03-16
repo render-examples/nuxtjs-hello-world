@@ -1,7 +1,9 @@
 <template>
   <section class="c-home_hero" :data-loaded="hasLoaded ? 'true' : 'false'">
     <div class="o-wrapper  o-wrapper--h">
-      <Blob class="c-home_hero__blob" :blobScale="blobScale"/>
+      <LazyHydrate when-idle>
+        <Blob class="c-home_hero__blob" :blobScale="blobScale"/>
+      </LazyHydrate>
       <div class="c-home_hero__copy o-grid">
         <h1 class="c-home_hero__title t-display_1  o-grid" ref="titleText" >
           <span class="c-home_hero__title--1" data-text="Creativity" v-html="title1"></span>
@@ -25,12 +27,14 @@
 </template>
 
 <script>
-import Blob from './Blob.vue';
 import { diceCharacters } from '@/helpers/textDicer.js';
+import LazyHydrate from 'vue-lazy-hydration';
+
 
 export default {
   components: {
-    Blob
+    LazyHydrate,
+    Blob: () => import('./Blob.vue')
   },
   data() {
     return {
