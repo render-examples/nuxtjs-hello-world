@@ -4,7 +4,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 import { onLoad } from '../../helpers/onLoad';
 
 export default {

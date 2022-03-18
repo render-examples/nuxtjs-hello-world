@@ -22,6 +22,7 @@ export default {
     ],
     script: [
       // Schema.org definitions
+      { hid: 'threejs', src: '/scripts/three.min.js', async: true, defer: true },
       {
         type: 'application/ld+json', json: 
         {
