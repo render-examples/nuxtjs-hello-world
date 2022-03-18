@@ -75,7 +75,10 @@ export default {
   ],
 
   build: {
-    transpile: ["vee-validate/dist/rules", "THREE"],
+    transpile: [
+      "vee-validate/dist/rules",
+      // "THREE"
+    ],
 
     // This stops PostCSS freaking out about CSS custom properties
     postcss: {
