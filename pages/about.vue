@@ -1,21 +1,19 @@
 <template>
   <div>
     <p>Hi from {{ name }}</p>
-    <NLink to="/">
-      Home page
-    </NLink>
+    <NLink to="/"> Home page </NLink>
   </div>
 </template>
 
 <script>
 export default {
-  asyncData () {
+  asyncData() {
     return {
-      name: process.static ? 'static' : (process.server ? 'server' : 'client')
-    }
+      name: process.static ? "static" : process.server ? "server" : "client",
+    };
   },
   head: {
-    title: 'About page'
-  }
-}
+    title: "アバウト",
+  },
+};
 </script>
